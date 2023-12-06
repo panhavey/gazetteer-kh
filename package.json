@@ -1,0 +1,40 @@
+{
+  "name": "gazetteer-kh",
+  "version": "0.0.1",
+  "description": "A JavaScript library for querying and filtering Cambodia's gazetteer.",
+  "keywords": [
+    "gazetteer",
+    "gazetteer-kh",
+    "pumi",
+    "cambodia gazetteer",
+    "cambodia region"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "sync-build": "npx ts-node src/sync.ts && npx ts-node src/toJson.ts && tsc",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "to-json": "npx tsx src/toJson.ts",
+    "sync-yaml": "npx ts-node src/sync.ts"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Panha Vey <panhavey@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "node-fetch": "2",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.7",
+    "@types/node": "^20.8.6",
+    "@types/node-fetch": "^2.6.7",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0"
+  },
+  "files": [
+    "/dist"
+  ]
+}
